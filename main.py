@@ -22,13 +22,9 @@ def get_exif_data(image_path):
 def main():
     st.title("exif data Uploader : ")
 
-    # Display a file uploader widget
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-
-    # If an image is uploaded, display it
     if uploaded_file is not None:
         st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
-
         get_exif_data(uploaded_file)
 
 
